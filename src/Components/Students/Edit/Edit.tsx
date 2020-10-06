@@ -1,6 +1,5 @@
 import { Avatar, Button, Flex, Stack } from '@chakra-ui/core';
 import { Formik, Form } from 'formik';
-import { useHistory } from 'react-router-dom';
 import React from 'react';
 
 import { StudentSchema } from './schema'
@@ -14,7 +13,6 @@ interface Props {
 }
 
 function StudentForm({ onBack, onSubmit, student }: Props) {
-  const history = useHistory()
 
   return (
     <Formik
