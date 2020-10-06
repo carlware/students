@@ -76,7 +76,7 @@ describe("Student Create Form", () => {
           state: "Something",
           zipcode: "12356",
           phone_number: "123567890",
-          gpa: "3",
+          gpa: 3,
         })
       })
     })

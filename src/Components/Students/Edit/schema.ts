@@ -11,5 +11,5 @@ export const StudentSchema = Yup.object({
   zipcode: Yup.string().required(REQUIRED_MSG),
   city: Yup.string().required(REQUIRED_MSG),
   phone_number: Yup.string().required(REQUIRED_MSG),
-  gpa: Yup.number().max(4.33).min(0.0),
+  gpa: Yup.number().max(4.33, "this value cannot be greater than 4.33").min(0.0, "this value cannot be a negative number"),
 });

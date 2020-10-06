@@ -21,30 +21,34 @@ function StudentForm({ onBack, onSubmit, student }: Props) {
       onSubmit={(values) => {
         onSubmit(values)
       }}>
-      <Form>
-        <Flex>
-        <Stack flex="1" flexDir="column" alignItems="center">
-          <Avatar backgroundColor="#0A72DB" size="2xl" name={`${student.first_name} ${student.last_name}`}></Avatar>
-        </Stack>
-        <Stack flex="2" flexDir="column">
-          <CInput label="First Name" name="first_name" placeholder="First Name" />
-          <CInput label="Last Name" name="last_name" placeholder="Last Name" />
-          <CInput label="Street Name" name="street_name" placeholder="Street Name" />
-          <CInput label="Street Number" name="street_number" placeholder="Street Number" />
-          <CInput label="City" name="city" placeholder="City" />
-          <CInput label="State" name="state" placeholder="State" />
-          <CInput label="Zipcode" name="zipcode" placeholder="Zipcode" />
-          <CInput label="Phone Number" name="phone_number" placeholder="Phone Number" />
-          <CInput label="GPA" name="gpa" placeholder="GPA" />
-        </Stack>
-        </Flex>
-        <Stack isInline alignItems="baseline" my="0.5rem">
-          <Stack flex="7" isInline justifyContent="space-between">
-            <Button color="#fff" backgroundColor="#0A72DB" onClick={onBack}>Back</Button>
-            <Button color="#fff" backgroundColor="#0A72DB" type="submit">Edit</Button>
-          </Stack>
-        </Stack>
-      </Form>
+        {
+          (values) => (
+          <Form>
+            <Flex>
+            <Stack flex="1" flexDir="column" alignItems="center">
+              <Avatar backgroundColor="#0A72DB" size="2xl" name={`${student.first_name} ${student.last_name}`}></Avatar>
+            </Stack>
+            <Stack flex="2" flexDir="column">
+              <CInput label="First Name" name="first_name" placeholder="First Name" />
+              <CInput label="Last Name" name="last_name" placeholder="Last Name" />
+              <CInput label="Street Name" name="street_name" placeholder="Street Name" />
+              <CInput label="Street Number" name="street_number" placeholder="Street Number" />
+              <CInput label="City" name="city" placeholder="City" />
+              <CInput label="State" name="state" placeholder="State" />
+              <CInput label="Zipcode" name="zipcode" placeholder="Zipcode" />
+              <CInput label="Phone Number" name="phone_number" placeholder="Phone Number" />
+              <CInput label="GPA" name="gpa" placeholder="GPA" type="number" />
+            </Stack>
+            </Flex>
+            <Stack isInline alignItems="baseline" my="0.5rem">
+              <Stack flex="7" isInline justifyContent="space-between">
+                <Button color="#fff" backgroundColor="#0A72DB" onClick={onBack}>Back</Button>
+                <Button color="#fff" backgroundColor="#0A72DB" type="submit" isDisabled={!values.isValid}>Edit</Button>
+              </Stack>
+            </Stack>
+          </Form>
+          )
+        }
     </Formik>
   );
 }

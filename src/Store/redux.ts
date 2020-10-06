@@ -9,8 +9,8 @@ import { StudentsState } from './state';
 const MOCKED_DATA: Student[] = [
   {
     id: ID(),
-    first_name: "Carlos",
-    last_name: "R",
+    first_name: "John",
+    last_name: "Doe",
     street_name: "The Bronx",
     street_number: "37",
     city: "New York",

@@ -16,7 +16,7 @@ function StudentListItem({ student, onDelete, onEdit }: Props) {
       <Text cursor="pointer" flex="1" width="30rem" isTruncated onClick={() => onEdit(student.id)}>{student.first_name}</Text>
       <Text flex="1" width="30rem">{student.last_name}</Text>
       <Text flex="1" width="30rem">{student.phone_number}</Text>
-      <Text flex="1" width="30rem">{student.gpa}</Text>
+      <Text flex="1" width="30rem">{student.gpa.toFixed(2)}</Text>
       <Stack isInline flex="1">
         <IconButton bg="transparent" icon={BsFillTrashFill} aria-label="delete" size="md" onClick={() => onDelete(student)} />
         <IconButton bg="transparent" icon={BsPencil} aria-label="edit" size="md" onClick={() => onEdit(student.id)} />

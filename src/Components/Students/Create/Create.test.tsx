@@ -50,7 +50,7 @@ describe("Student Create Form", () => {
         const onBack = jest.fn();
         const student: Student = INITIAL
 
-        const { container, getByText, getByLabelText, getByPlaceholderText } = render(
+        const { container, getByText, getByPlaceholderText } = render(
           <ThemeProvider>
             <CreateForm onBack={onBack} onSubmit={onSubmit} student={student}/>
           </ThemeProvider>
@@ -82,13 +82,14 @@ describe("Student Create Form", () => {
             target: { value: "123567890" }
           })
           fireEvent.change(getByPlaceholderText("GPA"), {
-            target: { value: 4.0 }
+            target: { value: 1.2 }
           })
         })
 
         await act(async () => {
           fireEvent.click(getByText("Create"))
         })
+
 
         expect(onSubmit).toHaveBeenCalledWith({
           id: "",
@@ -100,7 +101,7 @@ describe("Student Create Form", () => {
           state: "Something",
           zipcode: "12356",
           phone_number: "123567890",
-          gpa: "4",
+          gpa: 1.2,
         })
       })
     })
