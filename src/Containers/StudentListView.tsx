@@ -30,7 +30,7 @@ function ListView() {
           <Stack isInline marginBottom="2rem" justifyContent="flex-end">
             <Button color="#fff" backgroundColor="#0A72DB" onClick={() => history.push("/students/new")}>Create</Button>
           </Stack>
-          <List data={students} onDelete={onDelete} onEdit={onEdit} />
+          <List data={sorted} onDelete={onDelete} onEdit={onEdit} />
         </Card>
       </Flex>
     </>
