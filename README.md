@@ -1,6 +1,6 @@
 # Students Catalog
 
-This is a coding exercise in React with Typescript. It consists in create a basic CRUD operations for a list of students.
+This is a coding exercise in React with Typescript. It consists in create basic CRUD operations for a list of students.
 
 ## How to use
 ```
