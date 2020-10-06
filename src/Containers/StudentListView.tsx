@@ -6,7 +6,7 @@ import * as _ from "lodash";
 
 import { selectStudents, actions } from '../Store/redux';
 import { Card } from '../Components/Card';
-import List from '../Components/Students/List'
+import List from '../Components/Students/List/List'
 import { Student } from '../Models/student';
 import Confirmation from '../Components/Confirmation';
 import useConfirmation from '../Hooks/useConfirmation';

@@ -1,6 +1,5 @@
 import { Button, Stack } from '@chakra-ui/core';
 import { Formik, Form } from 'formik';
-import { useHistory } from 'react-router-dom';
 import React from 'react';
 
 import { StudentSchema } from './schema'
@@ -10,11 +9,10 @@ import { CInput } from '../../Forms';
 interface Props {
   onSubmit: (data: Student) => void
   student: Student
+  onBack: () => void
 }
 
-function StudentForm({ onSubmit, student }: Props) {
-  const history = useHistory()
-
+function StudentForm({ onSubmit, student, onBack }: Props) {
   return (
     <Formik
       initialValues={student}
@@ -34,7 +32,7 @@ function StudentForm({ onSubmit, student }: Props) {
         <CInput label="GPA" name="gpa" placeholder="GPA" />
         <Stack isInline alignItems="baseline" my="0.5rem">
           <Stack flex="7" isInline justifyContent="space-between">
-            <Button color="#fff" backgroundColor="#0A72DB" onClick={() => history.goBack()}>Back</Button>
+            <Button color="#fff" backgroundColor="#0A72DB" onClick={onBack}>Back</Button>
             <Button color="#fff" backgroundColor="#0A72DB" type="submit">Create</Button>
           </Stack>
         </Stack>
