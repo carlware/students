@@ -36,7 +36,7 @@ function CreateView() {
       <Card direction="column" background="#fff" marginBottom="1rem" width="40%">
         <Text fontWeight="700" fontSize="sm" color="#3F4254">Student</Text>
         <Divider />
-        <Form operation="save" onSubmit={add} student={INITIAL} />
+        <Form onSubmit={add} student={INITIAL} />
       </Card>
     </Flex>
   );

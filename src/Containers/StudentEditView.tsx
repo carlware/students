@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import React from 'react';
 import * as _ from "lodash";
 
-import Form from '../Components/Students/Create';
+import Form from '../Components/Students/Edit';
 import { actions, selectStudents } from '../Store/redux';
 import { Student } from '../Models/student';
 import { Card } from '../Components/Card';
@@ -31,7 +31,7 @@ function EditView() {
         <Divider />
         {
           student ? 
-          <Form operation="edit" onSubmit={edit} student={student} /> :
+          <Form onSubmit={edit} student={student} /> :
           <Text> Cannot find the student with the id: { id }</Text>
         }
       </Card>
