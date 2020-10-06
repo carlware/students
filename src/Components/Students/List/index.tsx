@@ -15,10 +15,13 @@ function List({ data = [], onDelete, onEdit }: Props) {
 
   return (
     <Flex flexDirection="column">
-
       <Stack isInline>
         <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">Name</Text>
-        <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">Actions</Text>
+        <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">Last</Text>
+        <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">City</Text>
+        <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">Phone</Text>
+        <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">GPA</Text>
+        <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">Delete</Text>
       </Stack>
       <Divider></Divider>
       {

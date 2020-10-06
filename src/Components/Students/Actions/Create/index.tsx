@@ -15,6 +15,7 @@ interface Props {
 
 function StudentForm({ operation, onSubmit, student }: Props) {
   const history = useHistory()
+  const message = operation === "save" ? "Create" : "Edit"
 
   return (
     <Formik
@@ -33,7 +34,7 @@ function StudentForm({ operation, onSubmit, student }: Props) {
         <Stack isInline alignItems="baseline" my="0.5rem">
           <Stack flex="7" isInline justifyContent="space-between">
             <Button color="#fff" backgroundColor="#0A72DB" onClick={() => history.goBack()}>Back</Button>
-            <Button color="#fff" backgroundColor="#0A72DB" type="submit"> {operation}</Button>
+            <Button color="#fff" backgroundColor="#0A72DB" type="submit"> {message}</Button>
           </Stack>
         </Stack>
       </Form>

@@ -13,6 +13,11 @@ function ListView() {
   const history = useHistory();
 
   const students = useSelector(selectStudents)
+  const sorted = students.sort((a,b) => {
+    if (a.last_name > b.last_name) return 1;
+    if (a.last_name < b.last_name) return -1;
+    return 0;
+  })
 
   const onEdit = (id: string) => history.push("/students/" + id)
   const onDelete = (s: Student) => dispatch(actions.delete({ id: s.id }))

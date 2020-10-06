@@ -21,9 +21,11 @@ const INITIAL: Student = {
 function CreateView() {
   const dispatch = useDispatch()
   const history = useHistory()
+  
 
   const add = (data: Student) => {
     dispatch(actions.add({ student: data }))
+    history.goBack()
   }
 
   return (
