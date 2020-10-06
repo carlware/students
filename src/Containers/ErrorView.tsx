@@ -1,10 +1,11 @@
+import { Flex, Text } from '@chakra-ui/core';
 import React from 'react';
 
 function Error() {
   return (
-    <div>
-     Error
-    </div>
+    <Flex alignItems="center" justifyContent="center">
+      <Text> Cannot found the requested page</Text>
+    </Flex>
   );
 }
 

@@ -12,8 +12,13 @@ export const studentsSlice = createSlice({
   } as StudentsState,
   reducers: {
     add: (state, action: PayloadAction<{student: Student}>) => {
+    },
+    delete: (state, action: PayloadAction<{id: string}>) => {
 
     },
+    update: (state, action: PayloadAction<{id: string, student: Student}>) => {
+
+    }
   }
 })
 

@@ -1,5 +1,5 @@
 import { BsFillTrashFill } from 'react-icons/bs';
-import { Stack, Avatar, Text, Box, Badge, IconButton } from '@chakra-ui/core';
+import { Stack, Text, IconButton } from '@chakra-ui/core';
 import React from 'react';
 import { Student } from '../../../Models/student';
 

@@ -7,11 +7,11 @@ import ListItem from './StudentListItem';
 
 interface Props {
   data?: Student[]
-  onDelete: (profile: Student) => void
+  onDelete: (student: Student) => void
   onEdit: (id: string) => void
 }
 
-function ProfileList({ data = [], onDelete, onEdit }: Props) {
+function List({ data = [], onDelete, onEdit }: Props) {
 
   return (
     <Flex flexDirection="column">
@@ -30,4 +30,4 @@ function ProfileList({ data = [], onDelete, onEdit }: Props) {
   );
 }
 
-export default ProfileList;
+export default List;

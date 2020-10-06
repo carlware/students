@@ -1,4 +1,4 @@
-import { Button, Stack, Text, Box } from '@chakra-ui/core';
+import { Button, Stack } from '@chakra-ui/core';
 import { Formik, Form } from 'formik';
 import { useHistory } from 'react-router-dom';
 import React from 'react';
