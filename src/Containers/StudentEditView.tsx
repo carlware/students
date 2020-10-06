@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import React from 'react';
 import * as _ from "lodash";
 
-import Form from '../Components/Students/Actions/Create';
+import Form from '../Components/Students/Create';
 import { actions, selectStudents } from '../Store/redux';
 import { Student } from '../Models/student';
 import { Card } from '../Components/Card';

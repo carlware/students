@@ -15,7 +15,6 @@ function StudentListItem({ student, onDelete, onEdit }: Props) {
     <Stack isInline my="0.5rem">
       <Text cursor="pointer" flex="1" width="30rem" isTruncated onClick={() => onEdit(student.id)}>{student.first_name}</Text>
       <Text flex="1" width="30rem">{student.last_name}</Text>
-      <Text flex="1" width="30rem">{student.city}</Text>
       <Text flex="1" width="30rem">{student.phone_number}</Text>
       <Text flex="1" width="30rem">{student.gpa}</Text>
       <Stack isInline flex="1">

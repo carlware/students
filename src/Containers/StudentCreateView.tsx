@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import React from 'react';
 
-import Form from '../Components/Students/Actions/Create';
+import Form from '../Components/Students/Create';
 import { actions } from '../Store/redux';
 import { Student } from '../Models/student';
 import { Card } from '../Components/Card';
@@ -12,16 +12,19 @@ const INITIAL: Student = {
   id: "",
   first_name: "",
   last_name: "",
+  street_name: "",
   street_number: "",
   city: "",
+  state: "",
+  zipcode: "",
   phone_number: "",
-  gpa: "",
+  gpa: 0,
 }
 
 function CreateView() {
   const dispatch = useDispatch()
   const history = useHistory()
-  
+
 
   const add = (data: Student) => {
     dispatch(actions.add({ student: data }))

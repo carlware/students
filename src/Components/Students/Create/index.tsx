@@ -4,8 +4,8 @@ import { useHistory } from 'react-router-dom';
 import React from 'react';
 
 import { StudentSchema } from './schema'
-import { Student } from '../../../../Models/student';
-import { CInput } from '../../../Forms';
+import { Student } from '../../../Models/student';
+import { CInput } from '../../Forms';
 
 interface Props {
   operation: "save" | "edit"
@@ -27,8 +27,11 @@ function StudentForm({ operation, onSubmit, student }: Props) {
       <Form>
         <CInput label="First Name" name="first_name" placeholder="First Name" />
         <CInput label="Last Name" name="last_name" placeholder="Last Name" />
-        <CInput label="Street Number/Name" name="street_number" placeholder="Street Number" />
+        <CInput label="Street Name" name="street_name" placeholder="Street Name" />
+        <CInput label="Street Number" name="street_number" placeholder="Street Number" />
         <CInput label="City" name="city" placeholder="City" />
+        <CInput label="State" name="state" placeholder="State" />
+        <CInput label="Zipcode" name="zipcode" placeholder="Zipcode" />
         <CInput label="Phone Number" name="phone_number" placeholder="Phone Number" />
         <CInput label="GPA" name="gpa" placeholder="GPA" />
         <Stack isInline alignItems="baseline" my="0.5rem">
