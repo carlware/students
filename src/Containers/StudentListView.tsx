@@ -1,10 +1,11 @@
 import { Flex, Button, Stack, Text, Avatar } from '@chakra-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import React, { useState } from 'react';
+import React from 'react';
+import * as _ from "lodash";
+
 import { selectStudents, actions } from '../Store/redux';
 import { Card } from '../Components/Card';
-
 import List from '../Components/Students/List'
 import { Student } from '../Models/student';
 import Confirmation from '../Components/Confirmation';
@@ -18,6 +19,7 @@ function ListView() {
   const history = useHistory();
 
   const students = useSelector(selectStudents)
+  const sorted = _.sortBy(students, ['last_name'])
 
   const { isOpen, onExecute, onCancel, onConfirm, data } = useConfirmation<Student>({
     confirm: (s) => dispatch(actions.delete({ id: s.id}))
@@ -33,7 +35,7 @@ function ListView() {
           <Stack isInline marginBottom="2rem" justifyContent="flex-end">
             <Button color="#fff" backgroundColor="#0A72DB" onClick={() => history.push("/students/new")}>Create</Button>
           </Stack>
-          <List data={students} onDelete={onExecute} onEdit={onEdit} />
+          <List data={sorted} onDelete={onExecute} onEdit={onEdit} />
         </Card>
       </Flex>
       <Confirmation isOpen={isOpen} title={TITLE} onCancel={onCancel} onConfirm={onConfirm}>
