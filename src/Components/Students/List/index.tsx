@@ -14,7 +14,7 @@ interface Props {
 function List({ data = [], onDelete, onEdit }: Props) {
 
   return (
-    <Flex flexDirection="column">
+    <Flex height="70vh" flexDirection="column">
       <Stack isInline>
         <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">First Name</Text>
         <Text flex="1" textTransform="uppercase" fontSize="sm" fontWeight="700">Last Name</Text>

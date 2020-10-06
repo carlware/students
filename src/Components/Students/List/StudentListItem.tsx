@@ -12,7 +12,7 @@ interface Props {
 
 function StudentListItem({ student, onDelete, onEdit }: Props) {
   return (
-    <Stack isInline my="0.5rem">
+    <Stack isInline my="0.5rem" >
       <Text cursor="pointer" flex="1" width="30rem" isTruncated onClick={() => onEdit(student.id)}>{student.first_name}</Text>
       <Text flex="1" width="30rem">{student.last_name}</Text>
       <Text flex="1" width="30rem">{student.phone_number}</Text>
